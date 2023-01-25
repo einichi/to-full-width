@@ -1,0 +1,22 @@
+{
+  "name": "to-full-width",
+  "version": "0.0.1",
+  "description": "Convert characters to full-width equivalents where they exist",
+  "main": "toFullWidth.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/einichi/to-full-width.git"
+  },
+  "author": "einichi",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/einichi/to-full-width/issues"
+  },
+  "homepage": "https://github.com/einichi/to-full-width#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
