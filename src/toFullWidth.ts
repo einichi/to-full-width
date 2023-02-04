@@ -1,12 +1,10 @@
-module.exports = { toFullWidth };
-
-function toFullWidth(str) {
+export function toFullWidth(str: string): string {
   return str
-    .replace(/[A-Za-z0-9!-/:-@¥[-`{-~]/g, function (s) {
+    .replace(/[A-Za-z0-9!-/:-@[-`{-~]/g, (s: string) => {
       return String.fromCharCode(s.charCodeAt(0) + 0xfee0);
     })
-    .replace(/[\uFF66-\uFF9F]/g, function (s) {
-      var map = {
+    .replace(/[\uFF66-\uFF9F]/g, (s: string) => {
+      const map: { [key: string]: string } = {
         ｦ: "ヲ",
         ｧ: "ァ",
         ｨ: "ィ",
@@ -67,5 +65,6 @@ function toFullWidth(str) {
         ﾟ: "゜",
       };
       return map[s] || s;
-    });
+    })
+    .replace("¥", "￥");
 }

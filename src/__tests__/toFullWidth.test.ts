@@ -1,4 +1,4 @@
-const { toFullWidth } = require("../toFullWidth");
+import { toFullWidth } from "../toFullWidth";
 
 test("converts lower-case half-width alphabets to full-width", () => {
   expect(toFullWidth("abcdefghijklmnopqrstuvwxyz")).toBe(
@@ -25,8 +25,8 @@ test("converts half-width Japanese characters to full-width", () => {
 });
 
 test("converts half-width symbols to full-width", () => {
-  expect(toFullWidth("!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~")).toBe(
-    "！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝～"
+  expect(toFullWidth("!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~¥")).toBe(
+    "！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝～￥"
   );
 });
 
